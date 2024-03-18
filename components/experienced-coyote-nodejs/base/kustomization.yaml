@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: experienced-coyote-nodejs
+  janus-idp.io/tekton: experienced-coyote-nodejs
+  backstage.io/kubernetes-id: experienced-coyote-nodejs
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: experienced-coyote-nodejs
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
